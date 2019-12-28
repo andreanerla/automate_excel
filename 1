@@ -1,0 +1,312 @@
+Chapter 2: Variables
+
+
+
+1. Declare variable "myStr" as a string variable type.
+Sub Macro1()
+
+Dim myStr as string
+
+End Sub
+
+
+
+2. Set variable j equal to 2
+Sub Macro1()
+  Dim j as long
+
+j = 2
+
+End Sub
+
+
+
+3. Add 1 to the variable j.
+
+Sub Macro1()
+  Dim j as long
+  j = 2
+
+j = j + 1
+
+End Sub
+
+
+
+4. Set cell A1 equal to the variable j.
+
+Sub Macro1()
+  Dim j as long
+  j = 2
+  j = j + 1
+
+range("A1").value = j
+
+End Sub
+
+
+
+5. Declare a variable (i) that will allow you to store a large number (ex. 443,439)
+
+Sub Macro1()
+
+dim i as long
+
+End Sub
+
+
+
+6. Declare a variable (i) that will allow you to store a decimal number (ex. 54.33)
+
+Sub Macro1()
+
+dim i as Double
+
+End Sub
+
+
+
+7. Assign the string of text "this is a string" to the variable "strTest"
+
+Sub Macro1()
+  Dim strTest as string
+
+strTest = "this is a string"
+
+End Sub
+
+
+
+8. Set the variable "strTest" equal to the value of cell A1
+
+Sub Macro1()
+  Dim strTest as string
+
+strTest = range("A1").value  
+
+End Sub
+
+
+
+9. Set the variable "Flag" equal to FALSE.
+
+Sub Macro1()
+  Dim Flag as Boolean
+
+Flag = FALSE
+
+End Sub
+
+
+
+10. Switch the variable "Flag".
+
+Sub Macro1()
+  Dim Flag as Boolean
+
+Flag = Not Flag
+
+End Sub
+
+
+
+11. Assign the workbook "Example.xlsm" to the variable "myWB".
+
+Sub Macro1()
+  Dim myWB as Workbook
+
+set myWB = Workbooks("Example.xlsm") 
+
+End Sub
+
+
+
+12. Assign the worksheet "data" to the variable "myWS". Don't define a workbook.
+
+Sub Macro1()
+  Dim myWS as Worksheet
+
+set myWS = Worksheets("data")
+
+End Sub
+
+
+
+13. Assign this workbook (where the code is stored) to variable curWB
+
+Sub Macro1()
+  Dim curWB as Workbook
+
+set curWb = ThisWorkbook 
+
+End Sub
+
+
+
+14. Assign the active worksheet to the variable myWS.
+
+Sub Macro1()
+  Dim myWS as Worksheet
+
+set myWS = ActiveSheet
+
+End Sub
+
+
+
+15. Set the active cell value to 5.
+
+Sub Macro1()
+
+Activecell.value = 5
+
+End Sub
+
+
+
+16. Declare a string variable called "strWS" and give it the value "2017_12".
+
+Sub Macro1()
+  Dim strWS as String
+
+strWS = "2017_12"
+
+End Sub
+
+
+
+17. Set strWS equal to named range "date". Then set cell "A1" on sheet strWS equal to 1.
+
+Sub Macro1()
+  Dim strWS As String
+
+strWS = Range("date").Value
+Sheets(strWS).Range("A1").Value = 1
+
+End Sub
+
+
+
+--------------
+
+
+
+Chapter 3: Conditional Logic: If and Select Cases
+
+
+
+
+1. Test if 5 is less than or equal to 3 and assign the result to the variable "Test"
+
+Sub Macro1()
+  Dim Test as Boolean
+
+test = 5 <=  3
+
+End Sub
+
+
+
+
+2. Make the declaration allowing you to compare text, while ignoring case.
+
+Option Compare Text 
+
+
+
+
+3. Now compare "String" and "string" and assign the result to the variable "test".
+
+Option Compare Text
+Sub Macro1()
+
+test  = "String" = "string"
+
+End Sub
+
+
+
+
+4. Test if variable "string1" does not equal variable "string2"
+
+Option Compare Text
+Sub Macro1()
+
+test = string1 <> string2
+
+End Sub
+
+
+
+
+5. Test if n > 100 with an IF Statement. Set note = "check" if TRUE else note = "immaterial"
+
+Sub Macro1()
+
+If n > 100 then
+   note = "Check"
+else
+   note = "immaterial"
+End if
+
+End Sub
+
+
+
+
+6. Test if a number n is less than or equal to 3 or greater than or equal to 10 by using the "Or" operator.
+
+Sub Macro1()
+
+If (n <= 3) or (n >= 10) then  
+
+    'do something
+  End If
+End Sub
+
+
+
+
+7. Add another Elseif to the previous example to test if animal = "Cow". If TRUE then create a message box that says "Moo".
+
+Sub Macro1()
+  If animal = "cat" Then
+    MsgBox "Meow"
+  ElseIf animal = "Dog" Then
+    MsgBox "Woof"
+
+Elseif animal = "Cow" Then
+MsgBox "Moo"
+
+  Else
+    MsgBox "*Crickets*"
+  End If
+End Sub
+
+
+
+
+
+8. Use a Select Case statement to test if variable "animal" is equal to "cat" or "dog" and output "meow" or "woof" to the variable "sound" if there is a match.
+
+Sub Macro1()
+
+Select Case animal
+Case cat: Sound = "meow"
+Case dog: Sound = "woof"
+End Select
+
+
+
+
+
+End Sub
+
+
+
+
+--------------
+
+
+
+
