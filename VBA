@@ -341,7 +341,278 @@ End Sub
 
 3. Loop through each worksheet in a workbook and set range "A1" of each worksheet equal to the worksheet name.
 
+Sub Macro1()
+  Dim ws as Worksheet
 
-********************
-********************
-********************
+For each ws in Worksheets
+ws.range("A1").Value = ws.Name  
+ Next ws
+
+
+
+4. Loop through each cell in range "a1:a100" and set each cell's value equal to the cell directly to its right.
+
+Sub Macro1()
+  Dim cell as Range
+
+For Each cell in Range ("A1:A100")
+cell.Value = cell.Offset(0,1).Value  
+next cell
+
+
+
+
+5. Use a Do loop to repeat a task only while variable testvalue > 100.
+
+Sub Macro1()
+
+Do
+while testvalue > 100
+Loop
+
+End Sub
+
+
+
+Chapter 5: Advanced Cells, Rows, Columns and Sheets
+
+
+
+1. Get the row number of named range "drate" and assign it to a variable "row_num".
+
+Sub Macro1()
+  Dim row_num as Long
+
+row_num = range("drate").row
+
+End Sub
+
+
+
+2. Get the column number of named range "drate" and assign it to variable "col_num".
+
+Sub Macro1()
+
+col_num = range("drate").Column
+
+End Sub
+
+
+
+
+3. Delete Columns "H:I".
+
+Sub Macro1()
+
+Columns("H:I").delete
+
+End Sub
+
+
+
+4. Insert a row after row 3
+
+Sub Macro1()
+
+Rows(4).insert
+
+End Sub
+
+
+
+
+5. Insert a row below range "C4" using "EntireRow".
+
+Sub Macro1()
+
+range("C5").EntireRow.insert
+
+End Sub
+
+
+
+6. Unhide columns B and C.
+
+Sub Macro1()
+
+Columns("b:c").hidden = false
+
+End Sub
+
+
+
+7. Count the number of cells in range "import_data" and assign the result to variable "n".
+
+Sub Macro1()
+  Dim n as Long
+
+n = range("import_data").count
+
+End Sub
+
+
+
+8. Copy range "B3" to range "C3"
+
+Sub Macro1()
+
+Range ("B3").Copy Range ("C3")
+
+End Sub
+
+
+
+9. Copy range "A1" and paste formats to range "B1"
+
+Sub Macro1()
+
+Range("A1").Copy
+Range("B1").PasteSpecial Paste:= xlPasteFormats
+
+End Sub
+
+
+
+10. Use the range object and R1C1 style referencing to refer to cell "D4".
+
+Sub Macro1()
+
+range("R4C4")
+
+End Sub
+
+
+
+11. Use the cells object to assign the value of 4 to cell "E2".
+
+Sub Macro1()
+
+cells(2,5) = 4
+
+End Sub
+
+
+
+12. Find the last used column in the active worksheet and assign it to variable "lcol"
+
+Sub Macro1()
+
+lcol = ActiveSHEET.USEDRANGE.COLUMN
+
+End Sub
+
+
+
+13. Find the last used column in row 1 (hint start with cell "AZ1").
+
+Sub Macro1()
+
+range("AZ1").End(xlToLeft).column
+
+End Sub
+
+
+
+14. Select cell "B2" by offsetting from cell "D5"
+
+Sub Macro1()
+
+range("D5").offset(-3,-2).select
+
+End Sub
+
+
+
+Sub Macro1()
+
+range("A2").resize(4,2).select
+
+End Sub
+
+
+
+16. Set the formulaR1C1 property of range "B1:B10" to equal cell "C8".
+
+Sub Macro1()
+
+range("B1:B10").formulaR1C1 = "=R8C3"
+
+End Sub
+
+
+
+17. Set the formulas in range "B1:B5" to equal the cell directly to the left (Hint: Use negative 1)
+
+Sub Macro1()
+
+range("B1:B5").formulaR1C1 = "=RC[-1]"
+
+End Sub
+
+
+
+18. Select the cell one column to the right of the Activecell.
+
+Sub Macro1()
+
+Activecell.Offset(0,1).select
+
+End Sub
+
+
+
+19. Unhide sheet "data".
+
+Sub Macro1()
+
+sheets("data").visible = TRUE
+
+End Sub
+
+
+
+20. Make sheet "Data" very hidden
+
+Sub Macro1()
+
+sheets("Data").visible =xlSheetVeryHidden 
+
+End Sub
+
+
+
+21. Rename sheet "inputs" to "Start Here".
+
+Sub Macro1()
+
+sheets("inputs").name = "Start HERe"
+
+End Sub
+
+
+
+22. Unprotect the worksheet named "calcs" with the password "abc123".
+
+Sub Macro1()
+
+sheets("calcs").unprotect "abc123"
+
+End Sub
+
+
+
+
+Chapter 6: Message boxes and Input Boxes
+ 
+ 
+############################################
+############################################
+############################################
+
+
+
+
+
+
+
+
