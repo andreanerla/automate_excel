@@ -647,6 +647,14 @@ End Sub
 
 
 
+5. Create an InputBox with the prompt "How old are you?" and assign the input to the variable "myValue". Also add a title "Age", and default value 21 to the InputBox.
+
+Sub Macro1()
+
+myValue = InputBox("How old are you?", "Age", "21")
+
+End Sub
+
 
 
 
