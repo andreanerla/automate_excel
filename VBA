@@ -605,9 +605,47 @@ End Sub
 Chapter 6: Message boxes and Input Boxes
  
  
-############################################
-############################################
-############################################
+
+1. Create a basic message box with the prompt "STOP!"
+
+Sub Macro1()
+
+msgbox "stop!"
+
+End Sub
+
+
+
+2. Create a Yes/No message box with message box title "20 Questions" and prompt "Is it an animal?". Assign the answer to variable "vInput".
+
+Sub Macro1()
+
+vInput = MsgBox("Is it an animal?", vbYesNo, "20 Questions")
+
+End Sub
+
+
+
+3. Now create the same message box, but with buttons=vbYesNoCancel instead to add a cancel option.
+
+Sub Macro1()
+
+vInput = MsgBox("Is it an animal?", vbYesNoCancel, "20 Questions") 
+
+End Sub
+
+
+
+4. Create an InputBox with the prompt "How old are you?" and assign the input to the variable "myValue".
+
+Sub Macro1()
+
+myValue = InputBox("How old are you?") 
+
+End Sub
+
+
+
 
 
 
