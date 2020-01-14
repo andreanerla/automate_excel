@@ -1,3 +1,158 @@
+Chapter 1: Subs, Sheets, Ranges and the Basics
+
+
+1. Create a sub procedure titled "HelloWorld"
+
+Sub HelloWorld()
+
+
+
+End Sub
+
+
+2. Add a comment line that says: "I'm coding!"
+
+Sub HelloWorld()
+
+'I'm coding
+
+End Sub
+
+
+
+3. Assign the value of 2 to cell A2
+
+Sub Macro1()
+
+range("a2").value = 2
+
+End Sub
+
+
+
+4. Assign the value of "string of text" to cell A3
+
+Sub Macro1()
+
+range("A3").value = "string of text"
+
+End Sub
+
+
+
+5. Assign the value of "EZ" to cell A3 by separating "EZ" into 2 strings of text and combining them.
+
+Sub Macro1()
+
+range("A3").value = "E" & "Z"
+
+End Sub
+
+
+
+6. We've already declared the variable "Row" and set it equal to 5. Now, using the variable, set range "A5" = 1.
+
+Sub Macro1()
+  Dim Row
+  Row = 5
+
+range("A" & Row).value = 1
+
+End Sub
+
+
+
+7. Assign the value of .05 to the named range "drate".
+
+Sub Macro1()
+
+range("drate").value = .05
+
+End Sub
+
+
+
+8. Assign the value of 5 to cells A2:B3 . Hint: Enter the range exactly how it would appear in an Excel formula
+
+Sub Macro1()
+
+range("a2:b3").value = 5
+
+End Sub
+
+
+
+9. Assign the formula of 5*2 to range A2:A3
+
+Sub Macro1()
+
+range("a2:a3").formula = "=5 * 2" 
+
+End Sub
+
+
+
+10. Set cell A2 = B2 using the method you just learned.
+
+Sub Macro1()
+
+range("a2").value = range("b2").value
+
+End Sub
+
+
+
+11. Clear cell A2.
+
+Sub Macro1()
+
+range("a2").clear
+
+End Sub
+
+
+
+12. Clear only the contents of cell A2.
+
+Sub Macro1()
+
+range("a2").clearcontents
+
+End Sub
+
+
+
+13. Set cell A2 of sheet "Data" to "text"
+
+Sub Macro1()
+
+Sheets("Data").range("a2").value = "text"
+
+End Sub
+
+
+
+14. In the workbook named "wb1.xlsm", set cell A2 of sheet "Data" to "text"
+
+Sub Macro1()
+
+Workbooks("wb1.xlsm").sheets("Data").range("a2").value = "Text"
+
+End Sub
+
+
+
+15. Activate the "Inputs" sheet.
+
+Sub Macro1()
+
+Sheets("Inputs").activate
+
+End Sub
+
+
+
+
 Chapter 2: Variables
 
 
@@ -658,6 +813,32 @@ End Sub
 
 
 Chapter 7: Events
+
+1. Create an "click" event macro for a button named "CloseButton".
+
+Private Sub CloseButton_Click()
+
+
+
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
